@@ -1,8 +1,6 @@
 .container-list {
-    height: 200px;
+  height: 200px;
 }
-
-
 
 .title-switch-container {
   display: flex;
@@ -12,23 +10,21 @@
 }
 
 mat-slide-toggle {
-  margin: 0; /* Remove margens para alinhamento */
+  margin: 0;
 }
 
-/* Ajustes adicionais para o switch */
 .mat-slide-toggle-bar {
-  background-color: #e1bee7; /* Cor de fundo da barra quando desativado */
+  background-color: #e1bee7;
 }
 
 .mat-slide-toggle-thumb {
-  background-color: #6a1b9a; /* Cor do thumb (círculo) */
+  background-color: #6a1b9a;
 }
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
-  background-color: #6a1b9a; /* Cor de fundo da barra quando ativado */
+  background-color: #6a1b9a;
 }
 
 .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
-  background-color: #ba68c8; /* Cor do thumb (círculo) quando ativado */
+  background-color: #ba68c8;
 }
- 

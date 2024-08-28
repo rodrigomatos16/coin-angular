@@ -27,11 +27,11 @@ export class CryptoTableComponent {
 
   displayedColumns: string[] = ['position', 'name', 'change24h', 'change7d', 'marketValue'];
 
-  allFavorites = false;  // Controla a visibilidade dos ícones de estrela
+  allFavorites = false; 
 
 
   toggleAllFavorites(): void {
-    this.allFavorites = !this.allFavorites;  // Alterna a visibilidade para todos
+    this.allFavorites = !this.allFavorites;  
     this.dataSource.forEach(item => item.isFavorite = this.allFavorites);  // Aplica a todos
   }
 }  
