@@ -1,0 +1,35 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> # </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon *ngIf="element.isFavorite" class="favorite-icon" style="color: orange;">star</mat-icon>
+          {{ element.name }} 
+          <button mat-button>Buy</button>
+        </td>
+      </ng-container>
+      
+    <ng-container matColumnDef="change24h">
+      <th mat-header-cell *matHeaderCellDef> 24h % </th>
+      <td mat-cell *matCellDef="let element" [class.negative]="element.change24h.startsWith('-')"> {{element.change24h}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="change7d">
+      <th mat-header-cell *matHeaderCellDef> 7d % </th>
+      <td mat-cell *matCellDef="let element" [class.negative]="element.change7d.startsWith('-')"> {{element.change7d}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="marketValue">
+      <th mat-header-cell *matHeaderCellDef> Valor de mercado </th>
+      <td mat-cell *matCellDef="let element"> {{element.marketValue}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  

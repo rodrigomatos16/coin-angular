@@ -1,0 +1,55 @@
+mat-toolbar {
+  background: white;
+  color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+  .toolbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .nav-links a,
+  .right-links a,
+  .right-links {
+    padding: 12px;
+    color: black; /* ou outra cor que desejar */
+  }
+  .right-links {
+    display: flex;
+  }
+
+  .container-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .button-log-in {
+    color: black;
+    background: transparent;
+    border: none;
+  }
+  .button-sign-up {
+    background-color: #497bbd; /* Cor do botão Sign Up */
+  }
+  custom-search-field {
+    width: 100%;
+    border-radius: 20px;
+    background-color: red;
+
+    input {
+      text-indent: 8px; /* Indenta o texto para não sobrepor o ícone */
+    }
+
+    mat-icon {
+      color: #707070; /* Cor dos ícones */
+    }
+
+    .clear-button {
+      width: 24px; /* Tamanho reduzido do botão de limpeza */
+      line-height: 24px;
+    }
+  }
+}

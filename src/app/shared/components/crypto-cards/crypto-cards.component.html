@@ -1,0 +1,15 @@
+<div class="crypto-card-container">
+  <mat-card *ngFor="let crypto of cryptocurrencies" class="crypto-card">
+    <mat-card-header>
+      <div mat-card-avatar class="crypto-icon" [style.background-image]="'url(' + crypto.icon + ')'"></div>
+      <mat-card-title>{{ crypto.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="crypto-price">R$ {{ crypto.price | number:'1.2-2' }}</div>
+      <div class="crypto-change" [ngClass]="{'positive': crypto.change >= 0, 'negative': crypto.change < 0}">
+        {{ crypto.change | number:'1.2-2' }}%
+      </div>
+    </mat-card-content>
+    
+  </mat-card>
+</div>

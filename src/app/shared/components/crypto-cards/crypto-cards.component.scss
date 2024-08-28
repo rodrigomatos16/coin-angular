@@ -1,0 +1,30 @@
+.crypto-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .crypto-card {
+    width: 200px; /* Ajuste conforme necessário */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .crypto-icon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+  
+  .crypto-price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .crypto-change.positive {
+    color: green;
+  }
+  
+  .crypto-change.negative {
+    color: red;
+  }
+  
