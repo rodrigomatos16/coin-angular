@@ -1,30 +1,32 @@
 .container-list {
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .title-switch-container {
   display: flex;
-  align-items: center; /* Alinhamento vertical dos itens */
-  justify-content: space-between; /* Espaçamento entre os itens */
-  padding: 16px; /* Espaçamento interno para respiração */
+  align-items: center;
+  justify-content: space-between;
 }
 
-mat-slide-toggle {
-  margin: 0;
+.card-container {
+  max-height: 400px; /* Altura máxima da div */
+  overflow-y: auto;  /* Rolagem vertical */
+  padding-bottom: 2rem; /* Espaço para a barra de rolagem */
 }
 
-.mat-slide-toggle-bar {
-  background-color: #e1bee7;
+/* Adiciona um estilo opcional para estilizar a barra de rolagem */
+.card-container {
+  width: 100%;
 }
 
-.mat-slide-toggle-thumb {
-  background-color: #6a1b9a;
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor da barra de rolagem */
+  border-radius: 10px;
 }
 
-.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
-  background-color: #6a1b9a;
-}
-
-.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
-  background-color: #ba68c8;
+.card-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor da barra de rolagem ao passar o mouse */
 }

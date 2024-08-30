@@ -6,12 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CoinGeckoService {
-  private baseUrl = 'https://www.coingecko.com';
+  private baseUrl = 'https://api.coingecko.com/api/v3';
 
   constructor(private http: HttpClient) { }
 
   getTopCoins(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`);
+    return this.http.get(
+      `${this.baseUrl}/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false`
+    );
   }
 
   getCoinDetails(id: string): Observable<any> {

@@ -11,7 +11,17 @@ mat-toolbar {
     height: 10vh;
   }
 
-  .nav-links a,
+  .nav-links{
+    width: 100%;
+    color: #707070;
+    display: flex;
+    justify-content: space-between;
+    padding: 0,6rem;
+    cursor: pointer;
+  }
+
+
+  
   .right-links a,
   .right-links {
     padding: 12px;

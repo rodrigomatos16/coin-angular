@@ -1,21 +1,56 @@
-table {
-    width: 100%;
-  }
-  
-  th, td {
-    text-align: left;
-  }
-  
-  .negative {
-    color: red;
-  }
-  
-  button {
-    margin-left: 10px;
-  }
-  
-  .favorite-icon {
-    color: gold;
-  }
-  
-  
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: #f9f9f9;
+  color: #333;
+  font-weight: bold;
+}
+
+.coin-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.custom-table .positive {
+  color: green;
+}
+
+.custom-table .negative {
+  color: red;
+}
+
+button.mat-raised-button {
+  background-color: #00c853;
+  color: white;
+  font-weight: bold;
+}
+
+button.mat-raised-button:hover {
+  background-color: #00e676;
+}
+
+.mat-header-row {
+  border-bottom: 2px solid #ddd;
+}
+
+.mat-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.mat-row:hover {
+  background-color: #f1f1f1;
+}
+
+canvas {
+  width: 100px !important;
+  height: 50px !important;
+}

@@ -1,12 +1,15 @@
+<app-header (searchTerm)="onSearchTermReceived($event)"></app-header>
 
 <div class="container-list">
+  <div class="title-switch-container">
+    <p>Preço das criptomoedas por valor de mercado</p>
+    <mat-slide-toggle color="primary" [(ngModel)]="isHighlighted"></mat-slide-toggle>
+  </div>
 
-    <div class="title-switch-container">
-        <p>Preço das criptomoedas por valor de mercado</p>
-        <mat-slide-toggle color="primary" [(ngModel)]="isHighlighted"></mat-slide-toggle>
-      </div>
-      
+  <div class="card-container">
+    <app-crypto-cards [cryptocurrencies]="cryptocurrencies" (toggleFavorite)="handleToggleFavorite($event)"></app-crypto-cards>
 
-      <app-crypto-cards></app-crypto-cards> 
-<app-crypto-table></app-crypto-table>
+  </div>
+  
+  <app-crypto-table [dataSource]="tableDataSource" (toggleFavorites)="handleToggleFavorites($event)"></app-crypto-table>
 </div>

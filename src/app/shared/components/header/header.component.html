@@ -1,25 +1,23 @@
 <mat-toolbar color="primary">
   <div class="toolbar-container">
-    <a href="#" class="title">
-      <p class="nav-links">CoinMarketCap</p>
-    </a> 
     <div class="nav-links">
-      <a mat-button href="#">Cryptocurrencies</a>
-      <a mat-button href="#">Exchanges</a>
-      <a mat-button href="#">NFT</a>
-      <a mat-button href="#">CryptoTown</a>
-      <a mat-button href="#">Portfolio</a>
-      <a mat-button href="#">Watchlist</a>
-      <a mat-button href="#">Products</a>
-      <a mat-button href="#">Learn</a>
+      <a>CoinMarketCap</a>
+      <a >Cryptocurrencies</a>
+      <a  >Exchanges</a>
+      <a  >NFT</a>
+      <a  >CryptoTown</a>
+      <a  >Portfolio</a>
+      <a  >Watchlist</a>
+      <a  >Products</a>
+      <a  >Learn</a>
     </div>
     <div class="container-button">
       <button mat-button class="button-log-in">Log In</button>
       <button mat-raised-button color="accent" class="button-sign-up">Sign up</button>
       <div  class="custom-search-field">
         <mat-icon matPrefix>search</mat-icon>
-        <input matInput placeholder="Buscar">
-        <button mat-icon-button matSuffix  class="clear-button" >
+        <input matInput placeholder="Buscar" (input)="onSearch($event)">
+        <button mat-icon-button matSuffix class="clear-button" (click)="onSearch('')">
           <mat-icon>close</mat-icon>
         </button>
       </div>
